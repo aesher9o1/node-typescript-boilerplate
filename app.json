@@ -1,0 +1,11 @@
+{
+    "apps": [{
+        "name": "bgd-test",
+        "instances": 2,
+        "exec_mode": "cluster",
+        "script": "./dist/index.js",
+        "min_uptime": "5s",
+        "watch": false,
+        "autorestart": true
+    }]
+}
