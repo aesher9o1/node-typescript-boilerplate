@@ -1,0 +1,26 @@
+paths:
+  /category:
+    get:
+      tags:
+        - Categories
+      summary: The route contains APIS to fetch categories of restaurant
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: category
+          description: The category of restaurant you want to fetch
+          required: true
+          schema:
+            type: string
+            enum: [popularBrands, offersNearYou, expressDelivery, gourmet, exclusive]
+            example: popularBrands
+      responses:
+        200:
+          description: An array of object with available restaurants
+          content:
+            application/json:
+              schema:
+                $ref: '#/definitions/restaurants'
+        400:
+          description: Wrong query parameter provided

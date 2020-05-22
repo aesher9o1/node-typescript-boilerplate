@@ -2,7 +2,7 @@ export const environments = {
   production: 'production',
   qa: 'qa',
   staging: 'staging',
-  development: 'dev',
+  development: 'dev'
 }
 
 export const log = {
@@ -12,17 +12,17 @@ export const log = {
     info: 'brightCyan',
     verbose: 'brightWhite',
     debug: 'brightBlue',
-    silly: 'brightMagenta',
+    silly: 'brightMagenta'
   },
-  filename: 'debug.log',
+  filename: 'debug.log'
 }
 
 export const application = {
-  name: 'Demo Application',
+  name: 'Demo Application'
 }
 
 export const dummyEnvVariables = {
   PORT: 3000,
   LOG_LEVEL: 'debug',
-  NODE_ENV: 'development',
+  NODE_ENV: 'development'
 }

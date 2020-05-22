@@ -15,18 +15,18 @@ const options: winston.LoggerOptions = {
         format.colorize({ all: true }),
         format.simple(),
         winstonTimestampColorize({ color: 'green' }),
-        format.printf(msg => `${msg.level}: ${msg.message} - ${msg.timestamp}`),
-      ),
+        format.printf(msg => `${msg.level}: ${msg.message} - ${msg.timestamp}`)
+      )
     }),
     new winston.transports.File({
       filename: log.filename,
       format: format.combine(
         format.timestamp(),
         format.simple(),
-        format.printf(msg => `${msg.level}: ${msg.message} - ${msg.timestamp}`),
-      ),
-    }),
-  ],
+        format.printf(msg => `${msg.level}: ${msg.message} - ${msg.timestamp}`)
+      )
+    })
+  ]
 }
 
 const logger = winston.createLogger(options)
